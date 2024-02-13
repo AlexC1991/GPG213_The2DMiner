@@ -1,5 +1,9 @@
 using System;
+using System.Numerics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
+
 namespace AlexzanderCowell
 {
     public class TwoDCharacterMovement : MonoBehaviour
@@ -27,6 +31,9 @@ namespace AlexzanderCowell
         [SerializeField] private float groundDetectionRadius = 5f;
         [SerializeField] private GameObject crosshairsZDirection;
         private Animator miningMovement;
+        [SerializeField] private GameObject rotatingBackground;
+        private Vector2 startPosition;
+        
         private void Awake()
         {
             rb2D = GetComponent<Rigidbody2D>();
@@ -37,6 +44,7 @@ namespace AlexzanderCowell
 
         private void Start()
         {
+            startPosition = rotatingBackground.transform.position;
             moveSpeedOriginal = moveSpeed;
             walkingNow = true;
         }
@@ -55,15 +63,22 @@ namespace AlexzanderCowell
         {
             if (horizontalMovement > 0)
             {
+                /*float newPosition = Mathf.Repeat(Time.time * moveSpeed - 1, 50);
+                rotatingBackground.transform.position = startPosition + Vector2.right * newPosition;*/
+                
                 foreach (var g in childSpriteRenderers)
                 {
                     g.flipX = true;
                     childSpriteRenderers[3].flipX = false;
                 }
+                
                 transform.Translate(Vector3.right * (horizontalMovement * moveSpeed * Time.deltaTime));
             }
             else if (horizontalMovement < 0)
             {
+                /*float newPosition = Mathf.Repeat(Time.time * moveSpeed, 50);
+                rotatingBackground.transform.position = startPosition + Vector2.left * newPosition;*/
+                
                 foreach (var g in childSpriteRenderers)
                 {
                     g.flipX = false;
