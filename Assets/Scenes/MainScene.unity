@@ -403,11 +403,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4f7d07b565faf488c7be84fe9e8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSizeX: 150
-  gridSizeY: 246
+  gridSizeX: 250
+  gridSizeY: 102
   cellSize: 0.8
-  adjustableXLocation: 220
-  adjustableYLocation: 493
+  adjustableXLocation: 368
+  adjustableYLocation: 205
   mostSeenLayer:
   - {fileID: 6885549175602721231, guid: 5347ef590a0d63949b4c62050fee53bd, type: 3}
   - {fileID: 1009710132974889595, guid: 85c84f33202e2cb49960909d63331afd, type: 3}
@@ -424,6 +424,22 @@ MonoBehaviour:
   - {fileID: 8009351774492602734, guid: 412187c1eda250148b8d456d107053e8, type: 3}
   - {fileID: 7805258826854965373, guid: e60ddb88eb0261e4e9a477cccdaf5e9f, type: 3}
   - {fileID: 8568599110668908610, guid: 657e0c5ec3b6d7944abc6ad2dfe0b955, type: 3}
+  copperOreOptions:
+  - {fileID: 7897932935279326248, guid: 6117b7b369b4d354e86619f00c6c3a20, type: 3}
+  - {fileID: 1033436080501053299, guid: 4b27e373ed42b7540bd58bf51888e27f, type: 3}
+  - {fileID: 1009710132974889595, guid: 85c84f33202e2cb49960909d63331afd, type: 3}
+  - {fileID: 7805258826854965373, guid: e60ddb88eb0261e4e9a477cccdaf5e9f, type: 3}
+  steelOreOptions: []
+  diamondOreOptions: []
+  blockChildren: []
+  parentOfBlockChildren: {fileID: 826729789}
+  copperExample: {fileID: 21300000, guid: b965344423f70ae4b9caaaa8773aff5d, type: 3}
+  steelExample: {fileID: 21300000, guid: 9285e5dcdb0847548a384c3c634e62a5, type: 3}
+  diamondExample: {fileID: 21300000, guid: 94f2aad20f2675f41a74a554dc90add1, type: 3}
+  copperBlocks: []
+  steelBlocks: []
+  diamondBlocks: []
+  checkCopperStage: 0
 --- !u!4 &826729791
 Transform:
   m_ObjectHideFlags: 0
